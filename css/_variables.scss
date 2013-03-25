@@ -1,0 +1,30 @@
+//
+// Variables
+//
+
+// Colours
+$white        : rgba(255, 255, 255, 1);
+$black        : rgba(0, 0, 0, 1);
+$darkgrey     : lighten($black, 25%);
+$grey         : lighten($black, 50%);
+$lightgrey    : lighten($black, 75%);
+$lightergrey  : lighten($black, 90%);
+$textcolor    : rgba(97, 97, 97, 1);
+$linkcolor    : rgba(0, 102, 204, 1);
+$linkhover    : rgba(0, 153, 255, 1);
+$basecolor    : rgba(45,53,62, 1);
+$bordercolor  : lighten($basecolor, 60%);
+
+// Site Structure
+$site_width   : 960;
+$gutterwidth  : 24px;
+
+// Typographic Stuff
+$basefont              : sans-serif;
+$altfont               : serif;
+$codefont              : monospace;
+$basefontsize          : 16;
+$baselineheight        : 1.5em;
+$baseheadingfont       : serif;;
+$baseheadingfontweight : bold;
+$baseheadingfontcolor  : inherit;

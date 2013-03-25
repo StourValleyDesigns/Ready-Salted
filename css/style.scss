@@ -1,113 +1,80 @@
-/*
- * Theme: Ready Salted
- * Theme URI: https://github.com/StourvalleyDesigns/ready_salted
- * Description: A set of simple files used to kick off a web project
- * Version: 1.0
- * Author: Adam Chamberlin
+/*!
+ * Theme       : Ready Salted
+ * Theme URI   : https://github.com/StourvalleyDesigns/ready_salted
+ * Description : A set of simple files used to kick off a web project
+ * Version     : 1.0
+ * Author      : Adam Chamberlin
+ * Author URI  : http://twitter.com/funkylarma
  */
 
+//
+// Import Sass stuff
+//
+@import "variables";
+@import "mixins";
 
 /*
- * Reset and normalise
+ * CSS Reset
  */
+@import "reset";
 
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+/*
+ * Typographic styles
+ */
+@import "typography";
+
+/*
+ * Start custom styles here...
+ */
+html {
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: $grey;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
-  line-height:1;
-}
-
-article, aside, figure, footer, header, hgroup, nav, section {
-  display: block;
-}
-
-audio, canvas, video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-
-audio:not([controls]) {
-  display: none;
-}
-
-[hidden], .hide {
-  display: none;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none;
-}
-
-a {
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
- background-color: #ff9;
- color: #000;
- font-style: italic;
- font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom:1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
+  width: 100%;
+  background-color: transparent;
+  font-family: $basefont;
+  @include font-size($basefontsize);
+  line-height: $baselineheight;
+  color: $textcolor;
 }
 
 
 /*
- * Simple set of media queries
+ * Print stylesheet
  */
+@media print {
+  @import "print";
+}
+
+/*
+ * Media queries
+ */
+@-webkit-viewport { 
+  width: device-width;
+}
+
+@-moz-viewport { 
+  width: device-width;
+}
+
+@-ms-viewport { 
+  width: device-width;
+}
+
+@-o-viewport { 
+  width: device-width;
+}
+
+@viewport { 
+  width: device-width;
+}
 
 @media only screen and (min-width: 480px) {
 
